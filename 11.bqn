@@ -5,11 +5,11 @@ ParseMonkey ← {⟨(Int 2⊸↑)¨' '=_split 18↓1⊑𝕩, ParseOp 23↓2⊑�
 wl‿locs‿ops ← {⟨∾⊑¨𝕩,(≠∘⊑¨/↕∘≠)𝕩,1⊸↓¨𝕩⟩} ParseMonkey¨ (0=≠¨)_split •FLines "11.txt"
 insp ← (≠ops)⥊0
 _step ← {wl‿locs‿insp 𝔽 _𝕣 i:
-  o←i⊑ops
-  a←(𝔽(⊑o){𝔽})¨(i=locs)/wl
-  ⟨a⌾((i=locs)⊸/)wl
-   ((2↓o)⊏˜0≠(1⊑o)|a)⌾((i=locs)⊸/)locs
-   ((i⊑insp)++´i=locs)⌾(i⊸⊑)insp
+  o←i⊑ops ⋄ j ← i=locs
+  a←(𝔽(⊑o){𝔽})¨j/wl
+  ⟨a⌾(j⊸/)wl
+   ((2↓o)⊏˜0≠(1⊑o)|a)⌾(j⊸/)locs
+   ((i⊑insp)++´j)⌾(i⊸⊑)insp
   ⟩
 }
 •Show ×´2↑∨2⊑ (⌊÷⟜3)_step˜´⟜(⌽↕≠ops)⍟20 wl‿locs‿insp
