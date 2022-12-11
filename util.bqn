@@ -5,5 +5,8 @@
 # 𝕨 can be omitted to split the 1s in 𝔽𝕩
 _split ⇐ {(𝕨𝔽𝕩)(⊢-˜+`×¬)⊸⊔𝕩}
 
+# string to natural number
+Nat ⇐ (⊣+10×⊢)´·⌽-⟜'0'
+
 # string to integer
-Int ⇐ (⊣+10×⊢)´·⌽-⟜'0'
+Int ⇐ {'-'=⊑𝕩 ? -Nat 1↓𝕩 ; Nat 𝕩}
