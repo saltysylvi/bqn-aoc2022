@@ -1,6 +1,6 @@
 # Day 13 Solutions
 ⟨_split⟩ ← •Import "util.bqn"
-input ←  •BQN¨¨(0=≠¨)_split (@+10)=_split "[⟨"‿"]⟩" (⊢+-˜´∘⊣×⊑⊸=)´˜ •FChars "13.txt"
+input ←  •BQN¨¨(0=≠¨)_split (@+10)=_split "[⟨"‿"]⟩" (⊢+-˜´∘⊣×⊑⊸=)´˜ •FChars "inputs/13.txt"
 Compare ← { # yuck...
   1‿1≡•Type¨𝕨‿𝕩 ? × 𝕩-𝕨 ;
   1‿0≡•Type¨𝕨‿𝕩 ? (⋈𝕨) Compare 𝕩 ;

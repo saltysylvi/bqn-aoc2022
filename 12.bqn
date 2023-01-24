@@ -1,5 +1,5 @@
 # Day 12 Solutions
-input ← >•FLines "12.txt"
+input ← >•FLines "inputs/12.txt"
 r‿c ← ≢input
 s‿e ← ⊑∘/˘"SE"=⌜⥊input
 flatInput ← {'S':'a'; 'E':'z'; 𝕩}¨ ⥊input

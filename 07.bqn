@@ -1,6 +1,6 @@
 # Day 7 Solutions
 ⟨_split, Int⟩ ← •Import "util.bqn"
-input ← •FLines "07.txt"
+input ← •FLines "inputs/07.txt"
 
 # Create listing of ⟨path, dir/file name, size (if file)⟩
 Step ← {l‿p 𝕊 c: (⊑"$ cd"‿"$ ls"‿"dir "⊐·<4⊸↑)◶⟨
